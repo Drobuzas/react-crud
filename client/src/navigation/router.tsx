@@ -2,7 +2,9 @@ import React from 'react';
 import { createBrowserRouter } from 'react-router-dom';
 import NavbarLayout from 'components/layout/navbar-layout';
 import HomePage from 'pages/home-page';
+import HousePage from 'pages/house-page';
 import routes from './routes';
+import HouseFormPage from '../pages/house-form-page/index';
 
 const router = createBrowserRouter([
   {
@@ -12,6 +14,14 @@ const router = createBrowserRouter([
       {
         path: routes.HomePage,
         element: <HomePage />,
+      },
+      {
+        path: routes.HousePage.routePath,
+        element: <HousePage />,
+      },
+      {
+        path: routes.HouseCreatePage,
+        element: <HouseFormPage mode="create" />,
       },
     ],
   },
