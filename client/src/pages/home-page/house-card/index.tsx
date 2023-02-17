@@ -52,7 +52,7 @@ const HouseCard: React.FC<HouseCardProps> = ({
         </Box>
 
         <Styled.ButtonContainer>
-          <Button color="secondary" variant="outlined">Remeber</Button>
+          <Button color="secondary" variant="outlined">Remember</Button>
           <Button
             color="primary"
             variant="contained"
