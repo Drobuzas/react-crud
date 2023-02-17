@@ -1,6 +1,5 @@
 import { Box, styled } from '@mui/material';
 
-// eslint-disable-next-line import/prefer-default-export
 export const HouseCardGrid = styled(Box)(({ theme }) => ({
   display: 'grid',
   gridTemplateColumns: 'repeat(1, 1fr)',

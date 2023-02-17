@@ -1,23 +1,12 @@
 import React from 'react';
 import { Navigate, useParams } from 'react-router-dom';
-import ApiService from 'services/api-service';
 import routes from 'navigation/routes';
 import { Box } from '@mui/material';
+import useHouse from 'hooks/useHouse';
 
 const HousePage = () => {
   const { id } = useParams();
-
-  const [house, setHouse] = React.useState<HouseModel | undefined>(undefined);
-
-  React.useEffect(() => {
-    if (id !== undefined) {
-      (async () => {
-        const fetchedHouse = await ApiService.fetchHouse(id);
-
-        setHouse(fetchedHouse);
-      })();
-    }
-  }, [id]);
+  const house = useHouse(id);
 
   if (id === undefined) return <Navigate to={routes.HomePage} />;
 

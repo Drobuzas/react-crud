@@ -1,5 +1,4 @@
 type HouseModel = {
-  [x: string]: ReactNode;
   id: string,
   title: string,
   location: {
