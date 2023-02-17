@@ -26,7 +26,12 @@ const HouseCard: React.FC<HouseCardProps> = ({
     <Stack sx={{ boxShadow: 3, position: 'relative' }}>
       <Img src={images[0]} alt="" sx={{ aspectRatio: '1.42', width: 1 }} />
       <Styled.AdminActions>
-        <Button variant="contained" color="warning" size="small">
+        <Button
+          variant="contained"
+          color="warning"
+          size="small"
+          onClick={() => navigate(routes.HouseUpdatePage.createLink(id))}
+        >
           Update
         </Button>
         <Button variant="contained" color="error" size="small">

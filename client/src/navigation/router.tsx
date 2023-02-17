@@ -21,7 +21,11 @@ const router = createBrowserRouter([
       },
       {
         path: routes.HouseCreatePage,
-        element: <HouseFormPage mode="create" />,
+        element: <HouseFormPage />,
+      },
+      {
+        path: routes.HouseUpdatePage.routePath,
+        element: <HouseFormPage mode="update" />,
       },
     ],
   },
